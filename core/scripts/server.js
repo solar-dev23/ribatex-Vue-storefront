@@ -1,5 +1,6 @@
 const fs = require('fs')
 const path = require('path')
+const http = require('http')
 const express = require('express')
 const rootPath = require('app-root-path').path
 const resolve = file => path.resolve(rootPath, file)
@@ -15,6 +16,7 @@ const isProd = process.env.NODE_ENV === 'production'
 process.noDeprecation = true
 
 const app = express()
+app.server = http.createServer(app)
 
 let cache
 if (config.server.useOutputCache) {
@@ -239,10 +241,10 @@ app.get('*', (req, res, next) => {
   }
 })
 
-let port = process.env.PORT || config.server.port
+const port = process.env.PORT || config.server.port
 const host = process.env.HOST || config.server.host
 const start = () => {
-  app.listen(port, host)
+  app.server.listen(port)
     .on('listening', () => {
       console.log(`Vue Storefront Server started at http://${host}:${port}`)
     })

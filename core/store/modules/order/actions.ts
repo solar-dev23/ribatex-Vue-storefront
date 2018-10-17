@@ -16,7 +16,8 @@ const actions: ActionTree<OrderState, RootState> = {
   placeOrder ({ commit }, order) {
     const ajv = new Ajv()
     const orderSchema = require('./order.schema.json')
-    const orderSchemaExtension = require('./order.schema.extension.json')
+    // const orderSchemaExtension = require('./order.schema.extension.json')
+    const orderSchemaExtension = {}
     const validate = ajv.compile(Object.assign(orderSchema, orderSchemaExtension))
 
     const storeView = currentStoreView()

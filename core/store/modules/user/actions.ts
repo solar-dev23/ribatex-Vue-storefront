@@ -250,7 +250,8 @@ const actions: ActionTree<UserState, RootState> = {
   update (context, userData) {
     const ajv = new Ajv()
     const userProfileSchema = require('./userProfile.schema.json')
-    const userProfileSchemaExtension = require('./userProfile.schema.extension.json')
+    // const userProfileSchemaExtension = require('./userProfile.schema.extension.json')
+    const userProfileSchemaExtension = {}
     const validate = ajv.compile(Object.assign(userProfileSchema, userProfileSchemaExtension))
 
     if (!validate(userData)) { // schema validation of user profile data
