@@ -2,7 +2,7 @@
     "server": {
       "host": "localhost",
       "port": 3000,
-      "protocol": "http",
+      "protocol": "https",
       "api": "api",
       "useOutputCacheTagging": false,
       "useOutputCache": false,
@@ -23,8 +23,8 @@
       "db": 0
     },    
     "graphql":{
-      "host": "localhost",
-      "port": 8080
+      "host": "ribatex-no-api-live.herokuapp.com",
+      "port": 443
     },
     "elasticsearch": {
       "httpAuth": "",
