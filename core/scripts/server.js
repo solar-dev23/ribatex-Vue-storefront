@@ -182,7 +182,7 @@ app.get('*', (req, res, next) => {
       if (config.server.useOutputCacheTagging && context.output.cacheTags !== null) {
         tagsArray = Array.from(context.output.cacheTags)
         const cacheTags = tagsArray.join(' ')
-        res.setHeader('X-VS-Cache-Tags', cacheTags)
+        res.setHeader('Surrogate-Key', cacheTags)
         console.log(`cache tags for the request: ${cacheTags}`)
       }
       const contentPrepend = (typeof context.output.prepend === 'function') ? context.output.prepend(context) : ''
