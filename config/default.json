@@ -18,7 +18,7 @@
     },
     "redis": {
       "host": "ec2-52-210-133-182.eu-west-1.compute.amazonaws.com",
-      "auth": "p1a900f0a4251babf47f32584b5ec0c351fc56354465311f995d3bf1162bc9d5b",
+      "password": "p1a900f0a4251babf47f32584b5ec0c351fc56354465311f995d3bf1162bc9d5b",
       "port": 7119,
       "db": 0
     },    
