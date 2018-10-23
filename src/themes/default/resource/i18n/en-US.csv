@@ -32,6 +32,7 @@
 "color_filter","Color"
 "size_filter","Size"
 "price_filter","Price"
+"farbe_filter", "Farbe"
 "Price","Price"
 "Order Summary","Order Summary"
 "Safety","Safety"

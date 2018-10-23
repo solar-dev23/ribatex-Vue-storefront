@@ -165,7 +165,7 @@
       "waitForPlatformSync": false,
       "setupVariantByAttributeCode": true,
       "endpoint": "https://ribatex-no-api-live.herokuapp.com/api/product",
-      "defaultFilters": ["color", "size", "price", "erin_recommends"],
+      "defaultFilters": ["color", "size", "price", "erin_recommends", "farbe"],
       "filterFieldMapping": {
         "category.name": "category.name.keyword"
       },
