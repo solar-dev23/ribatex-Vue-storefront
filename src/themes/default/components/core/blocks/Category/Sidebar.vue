@@ -47,6 +47,18 @@
           :label="price.label"
         />
       </div>
+      <div v-else-if="filterIndex==='manufacturer'">
+        <generic-selector
+          context="category"
+          :attribute_code="filter.attribute_code"
+          class="price-select mb10 block"
+          :code="filterIndex"
+          v-for="(option, index) in orderedManufacturers"
+          :key="index"
+          :id="option.id"
+          :label="option.label"
+        />
+      </div>
       <div v-else>
         <generic-selector
           context="category"
@@ -78,6 +90,7 @@
 </template>
 
 <script>
+import orderBy from 'lodash-es/orderBy'
 import Sidebar from '@vue-storefront/core/components/blocks/Category/Sidebar'
 
 import ColorSelector from 'theme/components/core/ColorSelector'
@@ -92,6 +105,11 @@ export default {
     PriceSelector,
     GenericSelector
   },
-  mixins: [Sidebar]
+  mixins: [Sidebar],
+  computed: {
+    orderedManufacturers: function () {
+      return orderBy(this.filters.manufacturer, 'label')
+    }
+  }
 }
 </script>
