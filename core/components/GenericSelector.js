@@ -50,7 +50,11 @@ export default {
       this.active = false
     },
     switchFilter (id, label) {
-      this.$bus.$emit('filter-changed-' + this.context, { attribute_code: this.code, id: id, label: label })
+      // this.$bus.$emit('filter-changed-' + this.context, { attribute_code: this.code, id: id, label: label })
+      this.$bus.$emit('filter-changed-' + this.context, { attribute_code: this.code, id: 9, label: 'Abu Garcia' }, { attribute_code: this.code, id: 149, label: 'Cormoran' })
+    },
+    switchFilter2 (params) {
+      // this.$bus.$emit('filter-changed-' + this.context, { attribute_code: this.code, id: id, label: label })
     }
   }
 }

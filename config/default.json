@@ -21,7 +21,7 @@
       "password": "p1a900f0a4251babf47f32584b5ec0c351fc56354465311f995d3bf1162bc9d5b",
       "port": 7119,
       "db": 0
-    },    
+    },
     "graphql":{
       "host": "ribatex-no-api-live.herokuapp.com",
       "port": 443
