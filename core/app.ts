@@ -7,7 +7,7 @@ import VueLazyload from 'vue-lazyload'
 import Vuelidate from 'vuelidate'
 import Meta from 'vue-meta'
 
-import router from '@vue-storefront/core/router'
+import { createRouter } from '@vue-storefront/core/router'
 import { registerTheme, plugins, mixins, filters } from '@vue-storefront/core/lib/themes'
 import registerExtensions from '@vue-storefront/core/lib/extensions'
 import i18n from '@vue-storefront/i18n'
@@ -32,7 +32,10 @@ if (buildTimeConfig.console.verbosityLevel !== 'display-everything') {
   takeOverConsole(buildTimeConfig.console.verbosityLevel)
 }
 
+export let router = null
+
 export function createApp (ssrContext, config): { app: Vue, router: any, store: any } {
+  router = createRouter()
   sync(store, router)
   store.state.version = '1.4.0'
   store.state.config = config
