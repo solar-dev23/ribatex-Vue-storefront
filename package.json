@@ -109,7 +109,7 @@
     "markdown-to-vue-loader": "^1.0.0",
     "mkdirp": "^0.5.1",
     "mocha": "^5.2.0",
-    "node-sass": "^4.9.3",
+    "node-sass": "^7.0.0",
     "object-hash": "^1.2.0",
     "phantomjs-prebuilt": "^2.1.10",
     "pm2": "^2.10.4",
